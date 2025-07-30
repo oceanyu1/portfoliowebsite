@@ -15,23 +15,19 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About Me</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Technologies</a>
+                            <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Projects</a>
+                            <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                test
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Coming soon!</a></li>
-                                <li><a class="dropdown-item" href="#">Also coming soon!</a></li>
-                                <li><a class="dropdown-item" href="#">Something coming...</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
