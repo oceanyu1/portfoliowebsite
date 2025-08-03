@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block title %}About Me{% endblock %}
 {% block content %}
-<h1 id="testing">Hi, my names Ocean,.</h1>
+<div class="intro">
+    <img src="{{ url_for('static', filename='/oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
+    <h1>Hi, I'm Ocean.</h1>
+    <h4>Welcome to my portfolio! I'm a second year Computer Science student with a passion for programming, specifically full stack development.</h4>
+</div>
+<div class="overview">
+    <h1>Overview</h1>
+</div>
 {% endblock %}
