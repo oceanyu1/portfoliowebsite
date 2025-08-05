@@ -1,35 +1,106 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #212529;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: larger;
+}
+
+/* Intro Section */
 .intro {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: left;
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 50px;
+    align-items: flex-start;
+    margin: 50px 200px;
     background-color: #212529;
     color: #ffffff;
 }
 
 .intro img {
-    margin-bottom: 50px;
     width: 400px;
+    margin-bottom: 50px;
 }
 
+/* Overview Section */
 .overview {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     background-color: #ffffff;
     color: #000000;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
+.overview h1 {
+    margin-bottom: 10px;
+}
+.overview p {
+    margin: 20px 200px;
+}
+
+/* Links Section */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px 200px;
     background-color: #212529;
     color: #ffffff;
 }
 
+.links p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+/* Buttons */
+#buttonlinks {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+#buttonlinks button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #212529;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#buttonlinks button:hover {
+    background-color: #8e9faf;
+}
+
+/* Emoji Wave Animation */
+@keyframes wave-animation {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(14deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave-animation 2s infinite;
+}

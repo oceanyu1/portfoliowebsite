@@ -2,11 +2,34 @@
 {% block title %}About Me{% endblock %}
 {% block content %}
 <div class="intro">
-    <img src="{{ url_for('static', filename='/oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
-    <h1>Hi, I'm Ocean.</h1>
-    <h4>Welcome to my portfolio! I'm a second year Computer Science student with a passion for programming, specifically full stack development.</h4>
+    <img src="{{ url_for('static', filename='oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
+    <h1><strong>Hi, I'm Ocean</strong> <span class="wave">👋</span></h1>
+    <p>I'm a second year Computer Science student with a passion for programming, specifically full stack development.</p>
 </div>
 <div class="overview">
-    <h1>Overview</h1>
+    <h1><strong>Overview</strong></h1>
+    <p>🎓 I'm currently working towards my Honours Bachelor of Science in Computer Science with a specialization in AI/ML at <a href="https://carleton.ca/" target="_blank">Carleton University</a>.</p>
+    <p>💻 I'm passionate about writing clean, efficient code and turning ideas into useful, user-focused applications. While I'm still early in my journey, I'm committed to learning and building real-world skills that will help me thrive in the tech industry.</p>
+    <p>🧠 Outside of class, I spend my time exploring new technologies, brushing up on frameworks like Flask, and experimenting with small personal projects to sharpen my development skills.</p>
+    <p>🔍 Currently, I'm focusing on strengthening my web development knowledge, understanding design systems, and learning more about software architecture and deployment.</p>
+    <p>🚀 I'm eager to contribute, grow, and collaborate with others, whether it's through internships, open-source contributions, or team projects. I'm excited for the path ahead!</p>
+</div>
+<div class="links">
+    <h1><strong>My Links</strong></h1>
+    <div id="buttonlinks">
+        <button type="button">Resume</button>
+        <button type="button" onclick="window.open('https://www.linkedin.com/in/oceanyu/', '_blank')"> 
+            <i class="fab fa-linkedin" style="margin-right: 5px;"></i> <!-- had to switch from simple icons as it was removed -->
+            LinkedIn
+        </button>
+        <button type="button" onclick="window.open('https://github.com/oceanyu1', '_blank')"> 
+            <img src="https://cdn.simpleicons.org/github/212529" alt="Github" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
+            Github
+        </button>
+        <button type="button" onclick="window.open('https://www.instagram.com/oceanyu_/#', '_blank')"> 
+            <img src="https://cdn.simpleicons.org/Instagram/212529" alt="Instagram" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
+            Instagram
+        </button>
+    </div>
 </div>
 {% endblock %}
