@@ -2,7 +2,7 @@
 {% block title %}About Me{% endblock %}
 {% block content %}
 <div class="intro">
-    <img src="{{ url_for('static', filename='oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
+    <img src="{{ url_for('static', filename='img/oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
     <h1><strong>Hi, I'm Ocean</strong> <span class="wave">👋</span></h1>
     <p>I'm a second year Computer Science student with a passion for programming, specifically full stack development.</p>
 </div>
@@ -17,7 +17,11 @@
 <div class="links">
     <h1><strong>My Links</strong></h1>
     <div id="buttonlinks">
-        <button type="button">Resume</button>
+        <button type="button">
+            <a href="{{ url_for('static', filename='testresume.jpg') }}" download class="btn">
+            📄 View my Resume
+            </a>
+        </button>
         <button type="button" onclick="window.open('https://www.linkedin.com/in/oceanyu/', '_blank')"> 
             <i class="fab fa-linkedin" style="margin-right: 5px;"></i> <!-- had to switch from simple icons as it was removed -->
             LinkedIn

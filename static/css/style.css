@@ -1,6 +1,16 @@
+/* Font Styles */
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/InterVariable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
+    font-feature-settings: "ss01" on;
     background-color: #212529;
     color: #ffffff;
     margin: 0;
@@ -17,9 +27,13 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 50px 200px;
+    padding: 50px 200px;
     background-color: #212529;
     color: #ffffff;
+
+    /* Dot background */
+    background-image: radial-gradient(#43484f 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 .intro img {
@@ -37,6 +51,10 @@ p {
     color: #000000;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    /* Dot background */
+    background-image: radial-gradient(#e3e4e6 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 .overview h1 {
@@ -52,9 +70,13 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 50px 200px;
+    padding: 50px 200px;
     background-color: #212529;
     color: #ffffff;
+
+    /* Dot background */
+    background-image: radial-gradient(#43484f 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 .links p {
@@ -103,4 +125,48 @@ p {
     display: inline-block;
     transform-origin: 70% 70%;
     animation: wave-animation 2s infinite;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color: #212529;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+    /* Center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; 
+}
+
+#backToTop:hover {
+    opacity: 1;
+}
+
+
+.projectssoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 200px;
+}
+
+.projectssoon h1 {
+    margin-top: 30px;
+}
+
+.contact {
+    padding: 50px 200px;
 }
