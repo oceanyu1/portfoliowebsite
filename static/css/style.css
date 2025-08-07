@@ -59,12 +59,11 @@ p {
 .overview {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     background-color: #ffffff;
     color: #000000;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 200px;
 
     /* Dot background */
     background-image: radial-gradient(#e3e4e6 1px, transparent 0);
@@ -75,7 +74,8 @@ p {
     margin-bottom: 10px;
 }
 .overview p {
-    margin: 20px 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Links Section */
