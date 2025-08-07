@@ -1,18 +1,20 @@
 {% extends "base.html" %}
-{% block title %}Skills{% endblock %}
+{% block title %}Contact{% endblock %}
 {% block content %}
-<div class="contact">
-    <h1>Contact Me 📞</h1>
-    <p>Want to chat or connect? Drop your email and message below. <em>(I'm also on the lookout for internship opportunities!)</em></p>
+<form class="contact" action="https://formsubmit.co/powergameruuu@gmail.com" method="POST">
+    <h1><strong>Contact Me</strong> 📞</h1>
+    <p class="secondary">Want to chat or connect? Drop your email and message below. <em>(I'm also on the lookout for internship opportunities!)</em></p>
     <div class="mb-3">  
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required></textarea>
     </div>
-    <button type="button" class="btn btn-light">Send</button>
-</div>
 
+    <input type="hidden" name="_next" value="{{ url_for('thank_you', _external=True) }}">
+
+    <button type="submit" class="btn btn-light">Send</button>
+</form>
 {% endblock %}

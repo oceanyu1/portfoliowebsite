@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}🎉 Thank You!{% endblock %}
+{% block content %}
+<div class="thankyou">
+    <img src="{{ url_for('static', filename='img/snoopyhappy.gif') }}" alt="Snoopy happy">
+    <h1>Thanks for reaching out!</h1>
+    <p>I'll get back to you soon.</p>
+</div>
+
+{% endblock %}

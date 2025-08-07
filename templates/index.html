@@ -4,7 +4,30 @@
 <div class="intro">
     <img src="{{ url_for('static', filename='img/oceanparis.jpg') }}" alt="A picture of me in Paris" id="oceanparis">
     <h1><strong>Hi, I'm Ocean</strong> <span class="wave">👋</span></h1>
-    <p>I'm a second year Computer Science student with a passion for programming, specifically full stack development.</p>
+    <p class="secondary">I'm a second year Computer Science student with a passion for programming and building cool stuff.</p>
+</div>
+<hr>
+<div class="links">
+    <h1><strong>Find Me Online:</strong></h1>
+    <div id="buttonlinks">
+        <!-- <button type="button">
+            <a href="{{ url_for('static', filename='img/testresume.jpg') }}" download style="padding: 10px 20px; font-size: 1rem; border: none; border-radius: 6px; background-color: #ffffff; color: #212529; text-decoration: none; display: inline-block; cursor: pointer; transition: background-color 0.2s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;">
+                📄 View my Resume
+            </a>
+        </button> -->
+        <button type="button" onclick="window.open('https://www.linkedin.com/in/oceanyu/', '_blank', 'noopener')"> 
+            <i class="fab fa-linkedin" style="margin-right: 5px;"></i> <!-- had to switch from simple icons as it was removed -->
+            LinkedIn
+        </button>
+        <button type="button" onclick="window.open('https://github.com/oceanyu1', '_blank', 'noopener')"> 
+            <img src="https://cdn.simpleicons.org/github/212529" alt="Github" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
+            Github
+        </button>
+        <button type="button" onclick="window.open('https://www.instagram.com/oceanyu_/#', '_blank', 'noopener')"> 
+            <img src="https://cdn.simpleicons.org/Instagram/212529" alt="Instagram" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
+            Instagram
+        </button>
+    </div>
 </div>
 <div class="overview">
     <h1><strong>Overview</strong></h1>
@@ -14,26 +37,33 @@
     <p>🔍 Currently, I'm focusing on strengthening my web development knowledge, understanding design systems, and learning more about software architecture and deployment.</p>
     <p>🚀 I'm eager to contribute, grow, and collaborate with others, whether it's through internships, open-source contributions, or team projects. I'm excited for the path ahead!</p>
 </div>
-<div class="links">
-    <h1><strong>My Links</strong></h1>
-    <div id="buttonlinks">
-        <button type="button">
-            <a href="{{ url_for('static', filename='testresume.jpg') }}" download class="btn">
-            📄 View my Resume
-            </a>
-        </button>
-        <button type="button" onclick="window.open('https://www.linkedin.com/in/oceanyu/', '_blank')"> 
-            <i class="fab fa-linkedin" style="margin-right: 5px;"></i> <!-- had to switch from simple icons as it was removed -->
-            LinkedIn
-        </button>
-        <button type="button" onclick="window.open('https://github.com/oceanyu1', '_blank')"> 
-            <img src="https://cdn.simpleicons.org/github/212529" alt="Github" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
-            Github
-        </button>
-        <button type="button" onclick="window.open('https://www.instagram.com/oceanyu_/#', '_blank')"> 
-            <img src="https://cdn.simpleicons.org/Instagram/212529" alt="Instagram" width="16" height="16" style="vertical-align: -2px; margin-right: 5px;">
-            Instagram
-        </button>
+<div class="skills">
+    <h1><strong>Technical Skills</strong></h1>
+    <div class="skills-grid">
+        <div class="skill">
+            <i class="devicon-python-plain colored"></i>
+            <p>Python</p>
+        </div>
+        <div class="skill">
+            <i class="devicon-java-plain colored"></i>
+            <p>Java</p>
+        </div>
+        <div class="skill">
+            <i class="devicon-html5-plain colored"></i>
+            <p>HTML</p>
+        </div>
+        <div class="skill">
+            <i class="devicon-css3-plain colored"></i>
+            <p>CSS</p>
+        </div>
+        <div class="skill">
+            <i class="devicon-git-plain colored"></i>
+            <p>Git</p>
+        </div>
+        <div class="skill">
+            <img src="{{ url_for('static', filename='img/flaskimage.svg') }}" alt="Flask Icon" width="98" height="98" />
+            <p>Flask</p>
+        </div>
     </div>
 </div>
 {% endblock %}

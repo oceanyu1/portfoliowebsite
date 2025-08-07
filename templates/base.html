@@ -2,14 +2,18 @@
 <html lang="en">
     <head>
         <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <meta name="description" content="Ocean Yu - Computer Science student specializing in full-stack development. View my portfolio, projects, and connect with me for internship opportunities.">
+        <meta name="keywords" content="Ocean Yu, Computer Science, Full Stack Developer, Portfolio, Python, Flask">
     </head>
     <body>
         {% set current_endpoint = request.endpoint %}
@@ -23,9 +27,6 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link {% if current_endpoint == 'about' %}active{% endif %}" aria-current="page" href="{{ url_for('about') }}">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if current_endpoint == 'skills' %}active{% endif %}" href="{{ url_for('skills') }}">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if current_endpoint == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
@@ -49,9 +50,6 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
@@ -88,8 +86,8 @@
             backToTopButton.style.display = 'none';
         });
         </script>
-        <footer>
-            
+        <footer style="text-align: center; padding: 20px; font-size: 0.9rem; color: #ccc;">
+            © 2025 Ocean Yu
         </footer>
     </body>
 </html>
